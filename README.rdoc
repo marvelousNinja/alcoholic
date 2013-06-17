@@ -1,0 +1,13 @@
+== I AM NOT ALCOHOLIC
+
+It is direct competitor of http://beeradvocate.com
+
+I am not alcoholic - is a catalog of beer-like products.
+Users can create records of new kinds of beer and share their reviews.
+
+Also, there's a number of killer features:
+
+1. Availability map
+2. Rating and pricing graphs
+3. SMS notifications when someone calls your favourite beer a 'piss'
+4. And more =)
