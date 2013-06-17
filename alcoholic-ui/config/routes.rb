@@ -1,4 +1,7 @@
 AlcoholicUi::Application.routes.draw do
+  resources :beers, except: [:new, :edit]
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
