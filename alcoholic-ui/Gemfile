@@ -8,6 +8,7 @@ gem 'jquery-rails'
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
+  gem "jasminerice", :git => 'https://github.com/bradphelan/jasminerice.git'
 end
 
 group :assets do

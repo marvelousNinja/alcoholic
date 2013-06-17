@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/bradphelan/jasminerice.git
+  revision: 13ae61378afdf66aed7eb945172eb1f5c75b451b
+  specs:
+    jasminerice (0.1.0)
+      coffee-rails
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -124,6 +131,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
+  jasminerice!
   jquery-rails
   rails (= 3.2.13)
   rspec-rails (~> 2.0)
