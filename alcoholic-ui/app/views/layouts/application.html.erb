@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='alcoholic'>
 <head>
   <title>AlcoholicUi</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body ui-view='body'>
 
 <%= yield %>
 

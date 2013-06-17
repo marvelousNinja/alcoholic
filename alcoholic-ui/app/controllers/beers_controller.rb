@@ -22,6 +22,6 @@ class BeersController < ApplicationController
   def destroy
     @beer = Beer.find(params[:id])
     @beer.destroy
-    @respond_with @beer
+    respond_with @beer
   end
 end
