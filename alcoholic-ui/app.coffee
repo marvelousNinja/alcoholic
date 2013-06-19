@@ -4,7 +4,6 @@ http = require('http')
 path = require('path')
 httpProxy = require('http-proxy')
 assets = require('connect-assets')
-jadeAssets = require('connect-assets-jade')
 
 app = express()
 proxy = new httpProxy.RoutingProxy()
@@ -25,10 +24,7 @@ app.use express.logger('dev')
 app.use express.bodyParser()
 app.use express.methodOverride()
 app.use app.router
-
-# Assets
 app.use assets()
-app.use assets(jsCompilers: { jade: jadeAssets() })
 
 # Development only
 app.use express.errorHandler()  if 'development' is app.get('env')

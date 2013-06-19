@@ -10,7 +10,6 @@
     "jade": "*",
     "connect-assets": "~2.4.3",
     "coffee-script": "~1.6.3",
-    "http-proxy": "~0.10.2",
-    "connect-assets-jade": "~0.1.0"
+    "http-proxy": "~0.10.2"
   }
 }
