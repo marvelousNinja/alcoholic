@@ -1,9 +1,7 @@
 doctype 5
-html
+html(ng-app='alcoholic')
   head
-    title Express App
+    title Alcoholic UI
     != css('application')
     != js('application')
-  body
-    h1 Express App
-    p Welcome to Express App
+  body(ui-view='body')

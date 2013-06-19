@@ -35,8 +35,8 @@ app.get '/', (req, res) ->
   res.render 'index'
 
 # Routes for templates
-app.get '/templates/:path', (req, res) ->
-  res.render req.params.path
+app.get /templates\/(.*)/, (req, res) ->
+  res.render req.params[0]
 
 # Proxy for API requests
 app.all '/api/*', (req, res) ->
