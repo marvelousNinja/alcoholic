@@ -7,7 +7,7 @@ describe 'BeersController', ->
       @httpBackend = $httpBackend
       @httpBackend.whenGET('/beers').respond @beers
       @scope = $rootScope.$new()
-      @controller = $controller('BeersController', { $scope: @scope} )
+      @controller = $controller('BeersController', { $scope: @scope } )
       @httpBackend.flush()
       @beers_service = BeersService
 
