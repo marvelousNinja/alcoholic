@@ -14,7 +14,7 @@ files = [
   'assets/javascripts/vendor/angular-ui-router.js'
   'assets/javascripts/vendor/angular-mocks.js'
   'assets/javascripts/app/**/*.coffee'
-  'spec/javascripts/jasmine-jquery.js'
+  'spec/javascripts/lib/*.js'
   'spec/javascripts/**/*.coffee'
   {
     pattern: 'spec/javascripts/fixtures/**/*.json'
