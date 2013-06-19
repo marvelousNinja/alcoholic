@@ -26,6 +26,10 @@ app.use express.methodOverride()
 app.use app.router
 app.use assets()
 
+# Assets
+js.root = '/javascripts'
+css.root = '/stylesheets'
+
 # Development only
 app.use express.errorHandler()  if 'development' is app.get('env')
 
