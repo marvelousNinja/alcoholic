@@ -1,6 +1,7 @@
 AlcoholicApi::Application.routes.draw do
-  resources :beers, except: [:new, :edit]
-
+  namespace :api do
+    resources :beers, except: [:new, :edit]
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe BeersController do
+describe Api::BeersController do
 
   let(:valid_attributes) { { "name" => "Duff" } }
 

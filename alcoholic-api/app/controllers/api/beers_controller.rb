@@ -1,4 +1,4 @@
-class BeersController < ApplicationController
+class Api::BeersController < ApplicationController
   def index
     @beers = Beer.all
     respond_with @beers
