@@ -1,6 +1,0 @@
-== ALCOHOLIC UI
-
-It is an UI application for I AM NOT ALCOHOLIC project.
-We have our javascript-heavy client here and also tests for it.
-
-This application heavily uses AngularJS and friends :)
