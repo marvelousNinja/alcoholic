@@ -1,13 +1,14 @@
-describe 'BeersController', ->
+describe 'BeerDetailsCtrl', ->
   beforeEach(angular.mock.module('alcoholic'))
 
   beforeEach ->
     inject ($rootScope, $controller, $httpBackend, BeersService) =>
-      @beers = getJSONFixture('beers.json')
+      @beer = getJSONFixture('beers.json')[0]
+      @id = @beer.id
       @httpBackend = $httpBackend
-      @httpBackend.whenGET('/api/beers').respond @beers
+      @httpBackend.whenGET("/api/beers/#{@id}").respond @beer
       @scope = $rootScope.$new()
-      @controller = $controller('BeersController', { $scope: @scope } )
+      @controller = $controller('BeerDetailsCtrl', { $scope: @scope, $stateParams: { id: @id } } )
       @httpBackend.flush()
       @beers_service = BeersService
 
@@ -15,10 +16,10 @@ describe 'BeersController', ->
     expect(@controller).toBeDefined()
 
   it 'should assign beers variable', ->
-    expect(@scope.beers).toBeDefined()
+    expect(@scope.beer).toBeDefined()
 
   it 'should set beers variable correctly', ->
-    valid_beers = @beers_service.query()
+    valid_beer = @beers_service.get { id: @id }
     @httpBackend.flush()
-    expect(@scope.beers).toEqual valid_beers
+    expect(@scope.beer).toEqual valid_beer
 

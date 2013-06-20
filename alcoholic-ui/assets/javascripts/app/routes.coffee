@@ -4,12 +4,12 @@
       url: '',
       views:
         body:
-          controller: 'BeersController'
-          templateUrl: 'templates/beers/index'
+          controller: 'TopBeersCtrl'
+          templateUrl: 'templates/beers/top'
     .state 'beer',
       url: '/:id',
       views:
         'body@':
-          controller: 'BeerController'
-          templateUrl: 'templates/beers/show'
+          controller: 'BeerDetailsCtrl'
+          templateUrl: 'templates/beers/details'
 ]
