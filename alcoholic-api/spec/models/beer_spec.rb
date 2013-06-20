@@ -14,4 +14,6 @@ describe Beer do
   it { should allow_mass_assignment_of(:origin_country) }
   it { should allow_mass_assignment_of(:alcohol) }
   it { should_not allow_mass_assignment_of(:id) }
+
+  it { should belong_to(:user) }
 end
