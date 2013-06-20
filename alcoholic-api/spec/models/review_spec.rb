@@ -14,8 +14,8 @@ describe Review do
   it { should allow_mass_assignment_of(:content) }
   it { should allow_mass_assignment_of(:score) }
   it { should allow_mass_assignment_of(:title) }
+  it { should allow_mass_assignment_of(:beer_id) }
+  it { should allow_mass_assignment_of(:user_id) }
 
   it { should_not allow_mass_assignment_of(:id) }
-  it { should_not allow_mass_assignment_of(:beer_id) }
-  it { should_not allow_mass_assignment_of(:user_id) }
 end
