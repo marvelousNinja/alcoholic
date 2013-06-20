@@ -2,8 +2,12 @@ AlcoholicApi::Application.routes.draw do
   devise_for :users
 
   namespace :api do
-    resources :beers, except: [:new, :edit]
+    resources :beers, except: [:new, :edit] do
+      resources :reviews, except: [:new, :edit]
+    end
+    resources :reviews, except: [:new, :edit]
   end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
