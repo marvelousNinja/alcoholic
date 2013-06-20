@@ -14,8 +14,11 @@ describe Beer do
   it { should allow_mass_assignment_of(:origin_country) }
   it { should allow_mass_assignment_of(:alcohol) }
   it { should allow_mass_assignment_of(:user_id) }
+  it { should allow_mass_assignment_of(:reviews_attributes) }
 
   it { should_not allow_mass_assignment_of(:id) }
+
+  it { should accept_nested_attributes_for(:reviews) }
 
   it { should belong_to(:user) }
   it { should have_many(:reviews) }
