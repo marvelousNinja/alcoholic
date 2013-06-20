@@ -1,4 +1,6 @@
 AlcoholicApi::Application.routes.draw do
+  devise_for :users
+
   namespace :api do
     resources :beers, except: [:new, :edit]
   end
