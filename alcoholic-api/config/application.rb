@@ -59,9 +59,6 @@ module AlcoholicApi
     # parameters by using an attr_accessible or attr_protected declaration.
     config.active_record.whitelist_attributes = true
 
-    # Do not wrap response objects in root
-    config.active_record.include_root_in_json = false
-
     # Enable the asset pipeline
     config.assets.enabled = true
 
