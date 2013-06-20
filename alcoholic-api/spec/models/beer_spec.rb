@@ -18,4 +18,5 @@ describe Beer do
   it { should_not allow_mass_assignment_of(:id) }
 
   it { should belong_to(:user) }
+  it { should have_many(:reviews) }
 end
