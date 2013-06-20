@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130620102347) do
+ActiveRecord::Schema.define(:version => 20130620102905) do
 
   create_table "beers", :force => true do |t|
     t.string   "name"
@@ -23,6 +23,19 @@ ActiveRecord::Schema.define(:version => 20130620102347) do
     t.float    "alcohol"
     t.integer  "user_id"
   end
+
+  create_table "reviews", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.float    "score"
+    t.integer  "user_id"
+    t.integer  "beer_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "reviews", ["beer_id"], :name => "index_reviews_on_beer_id"
+  add_index "reviews", ["user_id"], :name => "index_reviews_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
