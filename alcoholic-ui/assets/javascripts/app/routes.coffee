@@ -1,13 +1,19 @@
 @alcoholic.config ['$stateProvider', ($stateProvider) ->
   $stateProvider
-    .state 'beers',
-      url: '',
+    .state 'index',
+      url: ''
       views:
         body:
           controller: 'TopBeersCtrl'
           templateUrl: 'templates/beers/top'
-    .state 'beer',
-      url: '/beers/:id',
+    .state 'new_beer',
+      url: '/beers/new'
+      views:
+        'body@':
+          controller: 'NewBeerCtrl'
+          templateUrl: 'templates/beers/new'
+    .state 'beer_details',
+      url: '/beers/:id'
       views:
         'body@':
           controller: 'BeerDetailsCtrl'

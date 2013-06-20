@@ -15,10 +15,10 @@ describe 'BeerDetailsCtrl', ->
   it 'should be defined', ->
     expect(@controller).toBeDefined()
 
-  it 'should assign beers variable', ->
+  it 'should assign beer variable', ->
     expect(@scope.beer).toBeDefined()
 
-  it 'should set beers variable correctly', ->
+  it 'should set beer variable correctly', ->
     valid_beer = @beers_service.get { id: @id }
     @httpBackend.flush()
     expect(@scope.beer).toEqual valid_beer
