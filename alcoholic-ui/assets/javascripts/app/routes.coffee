@@ -7,7 +7,7 @@
           controller: 'TopBeersCtrl'
           templateUrl: 'templates/beers/top'
     .state 'beer',
-      url: '/:id',
+      url: '/beers/:id',
       views:
         'body@':
           controller: 'BeerDetailsCtrl'
