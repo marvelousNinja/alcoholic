@@ -36,6 +36,7 @@ app.use assets()
 # Assets
 js.root = '/javascripts'
 css.root = '/stylesheets'
+app.use '/images', express.static(__dirname + '/assets/images')
 
 # Development only
 app.use express.errorHandler()  if 'development' is app.get('env')
