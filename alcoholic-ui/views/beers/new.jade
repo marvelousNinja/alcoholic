@@ -1,13 +1,42 @@
-form(ng-submit='save()')
-  input(type='string', ng-model='beer.name')
-  input(type='string', ng-model='beer.manufacturer')
-  input(type='string', ng-model='beer.origin_country')
-  input(type='string', ng-model='beer.first_brewed_in')
-  input(type='string', ng-model='beer.alcohol')
-
-  input(type='string', ng-model='review.title')
-  input(type='string', ng-model='review.content')
-  input(type='string', ng-model='review.score')
-  button Post this beer
-
-a(href='/#') Back
+.container
+  .row
+    form.form-horizontal.well(ng-submit='save()')
+      fieldset
+        legend Post your beer record
+        .control-group
+          label.control-label Name
+          .controls
+            input.input-xlarge(ng-model='beer.name', type='text')
+        .control-group
+          label.control-label Manufacturer
+          .controls
+            input.input-xlarge(ng-model='beer.manufacturer', type='text')
+        .control-group
+          label.control-label Origin country
+          .controls
+            input.input-xlarge(ng-model='beer.origin_country', type='text')
+        .control-group
+          label.control-label First brewed in
+          .controls
+            input.input-xlarge(ng-model='beer.first_brewed_in', type='text')
+        .control-group
+          label.control-label Alcohol
+          .controls
+            input.input-xlarge(ng-model='beer.alcohol', type='text')
+        legend And your review...
+        .control-group
+          label.control-label Title
+          .controls
+            input.input-xlarge(ng-model='review.title', type='text')
+        .control-group
+          label.control-label Review
+          .controls
+            textarea.input-xlarge(ng-model='review.content', rows='3')
+        .control-group
+          label.control-label Score
+          .controls
+            input.input-xlarge(ng-model='review.score', type='text')
+      .form-actions
+        button.btn.btn-primary Submit Review
+  .row
+    a.btn.btn-primary(href='/#') Back
