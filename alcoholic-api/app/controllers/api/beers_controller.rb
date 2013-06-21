@@ -5,8 +5,8 @@ class Api::BeersController < ApplicationController
   end
 
   def show
-    @beer = Beer.find(params[:id])
-    respond_with :api, @beer
+    @beer = Beer.includes(:reviews).find(params[:id])
+    respond_with :api, @beer, :include => :reviews
   end
 
   def create
