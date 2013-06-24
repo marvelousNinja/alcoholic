@@ -16,6 +16,9 @@ html(ng-app='alcoholic')
                 a(href='/#') Top Beers
               li
                 a(href='#/beers/new') Post a new Beer
+              li
+            form.navbar-search.pull-right
+              input.search-query.span2(type='text', placeholder='Search')
 
     #main.container
       div(ui-view='body')
