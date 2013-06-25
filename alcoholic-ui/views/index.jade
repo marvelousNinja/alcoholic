@@ -7,17 +7,14 @@ html(ng-app='alcoholic')
     != js('application')
   body
     header
-      .navbar.navbar-fixed-top
+      .navbar.navbar-fixed-top.container
         .navbar-inner
-          .container
-            a.brand(href='../') I AM NOT ALCOHOLIC
-            ul.nav
-              li
-                a(href='/#') Top Beers
-              li
-                a(href='#/beers/new') Post a new Beer
-            form.navbar-search.pull-right
-              input.search-query.span2(type='text', placeholder='Search')
+          a.brand(href='../') I AM NOT ALCOHOLIC
+          ul.nav
+            li: a(href='/#') Top Beers
+            li: a(href='#/beers/new') Post a new Beer
+          form.navbar-search.pull-right
+            input.search-query(type='text', placeholder='Search')
 
     #main.container
       div(ui-view='body')
