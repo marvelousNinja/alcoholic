@@ -1,17 +1,16 @@
-.container
-  h4 Beers TOP:
-  p Best beers of all time. You're free to add and rate some of them!
-  table.span4.table.table-bordered.table-striped.table-hover
-      thead
-          tr
-            th #
-            th Name of the beer
-        tbody
-          tr(ng-repeat='beer in beers')
-            td {{$index + 1}}
-            td
-              a(href='#/beers/{{beer.id}}') {{beer.name}}
+h4 Beers TOP:
+p Best beers of all time. You're free to add and rate some of them!
+table.span4.table.table-bordered.table-striped.table-hover
+  caption
+  thead
+    tr
+      th #
+      th Name of the beer
+    tbody
+      tr(ng-repeat='beer in beers')
+        td {{$index + 1}}
+        td: a(href='#/beers/{{beer.id}}') {{beer.name}}
 
-  a.btn.btn-primary(href='#/beers/new') Post a new one
+a.btn.btn-primary(href='#/beers/new') Post a new one
 
 
