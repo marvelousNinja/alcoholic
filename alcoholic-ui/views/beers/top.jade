@@ -1,11 +1,11 @@
 h3 Top 250 beers
 p Best beers according to non-alcoholics (i.e. our users)
 ul.media-list
-  li.media(ng-repeat='beer in beers')
+  li.media.well(ng-repeat='beer in beers')
     a.pull-left(href='#/beers/{{beer.id}}')
       img.thumbnail.media-object(src='images/beer_thumbnail.jpg')
     h1.pull-right 98
-    .media-body.muted
+    .media-body
       h4.media-heading: a(href='#/beers/{{beer.id}}') {{beer.name}}
       .row
         .span2 Manufactured by
