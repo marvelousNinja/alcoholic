@@ -23,20 +23,21 @@
           label.control-label Alcohol
           .controls
             input.input-xlarge(ng-model='beer.alcohol', type='text')
-        legend And your review...
-        .control-group
-          label.control-label Title
-          .controls
-            input.input-xlarge(ng-model='review.title', type='text')
-        .control-group
-          label.control-label Review
-          .controls
-            textarea.input-xlarge(ng-model='review.content', rows='3')
-        .control-group
-          label.control-label Score
-          .controls
-            input.input-xlarge(ng-model='review.score', type='text')
-      .form-actions
-        button.btn.btn-primary Submit Review
-  .row
-    a.btn.btn-primary(href='/#') Back
+        fieldset(ng-controller='NewReviewCtrl')
+          legend And your review...
+          .control-group
+            label.control-label Title
+            .controls
+              input.input-xlarge(ng-model='review.title', type='text')
+          .control-group
+            label.control-label Review
+            .controls
+              textarea.input-xlarge(ng-model='review.content', rows='3')
+          .control-group
+            label.control-label Score
+            .controls
+              input.input-xlarge(ng-model='review.score', type='text')
+        .form-actions
+          button.btn.btn-primary Submit Review
+    .row
+      a.btn.btn-primary(href='/#') Back

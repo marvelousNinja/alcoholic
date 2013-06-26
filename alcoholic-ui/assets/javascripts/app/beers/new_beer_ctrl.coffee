@@ -3,7 +3,7 @@
     ($scope, $state, BeersService) ->
 
       $scope.save = ->
-        $scope.beer.reviews_attributes = [$scope.review]
+        $scope.$broadcast('savingBeer', $scope.beer)
 
         BeersService.save $scope.beer,
           (beer) ->
