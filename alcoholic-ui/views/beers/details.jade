@@ -1,40 +1,44 @@
-.container
-  .row
-    .span2
-      img(src='images/beer_stub.jpg')
-    .span4
-      h1 {{beer.name}}
-      p Made by: {{beer.manufacturer}}
-      p Origin country: {{beer.origin_country}}
-      p First brewed in: {{beer.first_brewed_in}}
-      p ABV: {{beer.alcohol}} %
-    .span4
-      h1 Overall rating:
-      h3 93.5
-  .row
-    .row.span4(ng-repeat='review in beer.reviews')
-      h3 Review by: Derp derp
-      h4 {{review.title}}
-      p {{review.content}}
-      h4 Score: {{review.score}}
-  .row
-    form.form-horizontal.well(ng-submit='saveReview()', ng-show='!reviewPosted')
-      fieldset
-        legend Post your own Review
-        .control-group
-          label.control-label Title
-          .controls
-            input.input-xlarge(ng-model='review.title', type='text')
-        .control-group
-          label.control-label Review
-          .controls
-            textarea.input-xlarge(ng-model='review.content', rows='3')
-        .control-group
-          label.control-label Score
-          .controls
-            input.input-xlarge(ng-model='review.score', type='text')
-      .form-actions
-        button.btn.btn-primary Submit Review
-
-  .row
-    a.btn.btn-primary(href='/#') Back
+.media
+  img.img-polaroid.media-object.pull-left(src='images/beer_stub.jpg')
+  img.img-polaroid.media-object.pull-right(src='images/map-stub.png')
+  .media-body
+    h1.media-heading {{beer.name}}
+    .row
+      .span5
+        p
+          | Some stubbed text about the beer Some stubbed text about the beerSome stubbed text about
+          | the beerSome stubbed text about the beerSome stubbed text about the beerSome stubbed text
+          | about the beerSome stubbed text about the beerSome stubbed text about the beer
+        .span2 Manufactured by
+        .span2 {{beer.manufacturer}}
+        .span2 ABV
+        .span2 {{beer.alcohol}}
+        .span2 Origin country
+        .span2 {{beer.origin_country}}
+        .span2 First brewed in
+        .span2 {{beer.first_brewed_in}}
+        h3.span4 Overall score: 98
+.row
+  .row.span4(ng-repeat='review in beer.reviews')
+    h3 Review by: Derp derp
+    h4 {{review.title}}
+    p {{review.content}}
+    h4 Score: {{review.score}}
+.row
+  form.form-horizontal.well(ng-submit='saveReview()', ng-show='!reviewPosted')
+    fieldset
+      legend Post your own Review
+      .control-group
+        label.control-label Title
+        .controls
+          input.input-xlarge(ng-model='review.title', type='text')
+      .control-group
+        label.control-label Review
+        .controls
+          textarea.input-xlarge(ng-model='review.content', rows='3')
+      .control-group
+        label.control-label Score
+        .controls
+          input.input-xlarge(ng-model='review.score', type='text')
+    .form-actions
+      button.btn.btn-primary Submit Review
